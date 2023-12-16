@@ -1,6 +1,6 @@
 name: crackuplib
-description: Library for getting and parsing jokes from <a href="https://upjoke.com/" target="_blank">upjoke.com</a>
-version: 1.0.0
+description: Library for getting and parsing jokes from upjoke.com
+version: 1.0.1
 repository: "https://github.com/mattheroit/crackuplib"
 issue_tracker: "https://github.com/mattheroit/crackuplib/issues"
 
