@@ -46,7 +46,9 @@ class CrackUp {
       response = await http.get(url);
       // Check if the request was successfull
       if (response.statusCode != 200) {
-        throw Exception('Failed to fetch categories. Status code: ${response.statusCode}');
+        throw Exception(
+          'Failed to fetch categories. Status code: ${response.statusCode}',
+        );
       }
     } catch (e) {
       print('Error fetching categories: $e');
@@ -80,7 +82,9 @@ class CrackUp {
       response = await http.get(url);
       // Check if the request was successfull
       if (response.statusCode != 200) {
-        throw Exception('Failed to fetch jokes for category "$category". Status code: ${response.statusCode}');
+        throw Exception(
+          'Failed to fetch jokes for category "$category". Status code: ${response.statusCode}',
+        );
       }
     } catch (e) {
       print('Error fetching jokes for category "$category": $e');
@@ -97,7 +101,8 @@ class CrackUp {
 
     dom.Document document = parser.parse(html);
 
-    List<dom.Element> documentData = document.getElementsByClassName("joke-wrapper");
+    List<dom.Element> documentData =
+        document.getElementsByClassName("joke-wrapper");
 
     for (var data in documentData) {
       var jokeHtml = data.getElementsByClassName("joke-content");
@@ -105,7 +110,8 @@ class CrackUp {
       // Here we are removing jokes with a read more button in the body
       if (!jokeHtml[0].children[1].innerHtml.contains("<button")) {
         String title = jokeHtml[0].children[0].innerHtml;
-        String body = jokeHtml[0].children[1].innerHtml.replaceAll("<br>", "\n");
+        String body =
+            jokeHtml[0].children[1].innerHtml.replaceAll("<br>", "\n");
         jokes.add(Joke(title: title, body: body));
       }
     }
