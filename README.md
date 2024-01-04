@@ -9,7 +9,7 @@ Why Crack up?? Because I wanted to get jokes about concrete.
 ```
 MIT License
 
-Copyright (c) 2023 Matěj Verhaegen
+Copyright (c) 2023-present Matěj Verhaegen
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
